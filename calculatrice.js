@@ -24,6 +24,7 @@ function Calc(){
         document.getElementsByClassName("previous_calc")[0].innerHTML = calcul
         calcul = calcul.replaceAll('×','*') //On remplace les multiplications par * pour que la fonction eval() comprenne
         calcul = calcul.replaceAll('÷','/') //On remplace les divisions par / pour que la fonction eval() comprenne
+        calcul = calcul.replaceAll(',','.') //On remplace les virgule par . pour que la fonction eval() comprenne
     
     
         document.getElementsByClassName("text_result")[0].innerHTML = eval(calcul)
