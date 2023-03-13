@@ -1,0 +1,148 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    height: 100%;
+}
+
+body{ 
+    height: 100%;
+    
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 200% 200%;
+    animation: gradient 5s infinite;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+
+}
+
+.calculatrice{
+    height: 60%;
+    width: 45%;
+    min-height: 220px;
+    margin-left: 27%;
+    margin-top: 5%;
+
+}
+
+.zone_result{
+    height: 18%;
+    background-color: rgb(201, 201, 201);
+}
+
+.zone_txt{
+    height: 18%;
+    background-color: white;
+}
+
+.zone_boutton{
+    background-color: rgb(201, 201, 201);
+    height: 64%;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.equal {
+    grid-column: 5/span 2;
+    grid-row: 4;  
+    background-color: rgb(33, 193, 33);
+    color: white;
+}
+.plus {
+    grid-column: 4;
+    grid-row: 4;  
+
+}
+.dote {
+    grid-column: 3;
+    grid-row: 4;  
+}
+.zero {
+    grid-column: 1;
+    grid-row: 4;  
+}
+.one {
+    grid-column: 1;
+    grid-row: 3;  
+}
+.two {
+    grid-column: 2;
+    grid-row: 3;  
+}
+.three {
+    grid-column: 3;
+    grid-row: 3;  
+}
+.minus {
+    grid-column: 4;
+    grid-row: 3;  
+}
+.four {
+    grid-column: 1;
+    grid-row: 2;  
+}
+.five {
+    grid-column: 2;
+    grid-row: 2;  
+}
+.six {
+    grid-column: 3;
+    grid-row: 2;  
+}
+.times {
+    grid-column: 4;
+    grid-row: 2;  
+}
+.left_parenthese {
+    grid-column: 5;
+    grid-row: 2;  
+}
+.right_parenthese {
+    grid-column: 6;
+    grid-row: 2;  
+}
+.seven {
+    grid-column: 1;
+    grid-row: 1;  
+}
+.eight {
+    grid-column: 2;
+    grid-row: 1;  
+}
+.nine {
+    grid-column: 3;
+    grid-row: 1;  
+}
+.divide {
+    grid-column: 4;
+    grid-row: 1;  
+}
+.reset {
+    grid-column: 6;
+    grid-row: 1;  
+}
+.case{
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 5px 5px 5px 5px;
+    text-align: center;
+    line-height: 150%;
+
+}
+
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
