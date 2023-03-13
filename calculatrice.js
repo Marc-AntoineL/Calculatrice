@@ -25,9 +25,16 @@ function Calc(){
         calcul = calcul.replaceAll('×','*') //On remplace les multiplications par * pour que la fonction eval() comprenne
         calcul = calcul.replaceAll('÷','/') //On remplace les divisions par / pour que la fonction eval() comprenne
         calcul = calcul.replaceAll(',','.') //On remplace les virgule par . pour que la fonction eval() comprenne
+
+        //Permet de détecter les erreurs dans le calcul.
+        try {
+            document.getElementsByClassName("text_result")[0].innerHTML = eval(calcul)
+          } catch (err) {
+          
+            document.getElementsByClassName("text_result")[0].innerHTML = "Syntax Error"
+          
+        }
     
-    
-        document.getElementsByClassName("text_result")[0].innerHTML = eval(calcul)
         document.getElementsByClassName("tape_txt")[0].innerHTML = "\n"
     }
 
