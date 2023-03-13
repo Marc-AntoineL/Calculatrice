@@ -30,6 +30,7 @@ body{
 }
 
 .zone_result{
+
     height: 18%;
     background-color: rgb(201, 201, 201);
 }
@@ -52,6 +53,7 @@ body{
     background-color: rgb(33, 193, 33);
     color: white;
 }
+
 .plus {
     grid-column: 4;
     grid-row: 4;  
@@ -125,6 +127,10 @@ body{
     grid-column: 6;
     grid-row: 1;  
 }
+.back {
+    grid-column: 5;
+    grid-row: 1;  
+}
 .case{
     border: 1px solid black;
     border-radius: 10px;
@@ -133,7 +139,38 @@ body{
     line-height: 150%;
 
 }
+.case:hover{
+    cursor: pointer;
+    background-color: rgb(170, 166, 166);
+}
+.equal:hover{
+    background-color: green;
+}
 
+.tape_txt {
+    height: 90%;
+    width: 80%;
+    padding: 2% 0 0 2%;
+}
+.previous_calc{
+    height: 30%;
+    width: 60%;
+    padding: 5% 0 0 2%;
+    float: left;
+}
+.eq{
+    float:right;
+    height: 30%;
+    width: 5%;
+    padding: 5% 0 0 2%;
+
+}
+.text_result{
+    float:right;
+    height: 30%;
+    width: 29%;
+    padding: 5% 0 0 2%;
+}
 
 @keyframes gradient {
     0% {

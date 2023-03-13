@@ -5,34 +5,45 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title> Calculatrice </title> <!-- Mettre le nom de la page -->
         <link rel="stylesheet" href="calculatrice.css"> <!-- ATTENTION à mettre le bon CSS et dans le dossier CSS ( voir doc ) -->
+        <script type="text/javascript" src="calculatrice.js"></script>
         <link rel="icon" type="image/gif" href="images/doigby.png"/>
     </head>
 	<body>
 		<div class="calculatrice">
-            <div class="zone_result"></div>
+            <div class="zone_result">
+                <div class="previous_calc"></div>
+                <div class="text_result"></div>
+                <div class="eq">=</div> 
+            </div>
             <hr>
-            <div class="zone_txt"></div>
+            <div class="zone_txt">
+                <div class="tape_txt">
+                </div>
+            </div>
             <hr>
             <div class="zone_boutton">
-                <div class="equal case">=</div>
-                <div class="plus case">+</div>
-                <div class="dote case">,</div>
-                <div class="minus case">-</div>
-                <div class="times case">x</div>
-                <div class="divide case">÷</div>
-                <div class="left_parenthese case">(</div>
-                <div class="right_parenthese case">)</div>
-                <div class="reset case">C</div>
-                <div class="zero case">0</div>
-                <div class="one case">1</div>
-                <div class="two case">2</div>
-                <div class="three case">3</div>
-                <div class="four case">4</div>
-                <div class="five case">5</div>
-                <div class="six case">6</div>
-                <div class="seven case">7</div>
-                <div class="eight case">8</div>
-                <div class="nine case">9</div>
+                <div class="equal case" onclick="Calc()">=</div>
+                <div class="reset case" onclick="UseCalcul('C')">C</div>
+                <div class="back case" onclick="UseCalcul('B')">B</div>
+
+                <div class="plus case" onclick="UseCalcul('+')">+</div>
+                <div class="dote case" onclick="UseCalcul(',')">,</div>
+                <div class="minus case" onclick="UseCalcul('-')">-</div>
+                <div class="times case" onclick="UseCalcul('×')">×</div>
+                <div class="divide case" onclick="UseCalcul('÷')">÷</div>
+                <div class="left_parenthese case" onclick='UseCalcul("(")'>(</div>
+                <div class="right_parenthese case" onclick='UseCalcul(")")'>)</div>
+            
+                <div class="zero case" onclick="UseCalcul('0')">0</div>
+                <div class="one case" onclick="UseCalcul('1')">1</div>
+                <div class="two case" onclick="UseCalcul('2')">2</div>
+                <div class="three case" onclick="UseCalcul('3')">3</div>
+                <div class="four case" onclick="UseCalcul('4')">4</div>
+                <div class="five case" onclick="UseCalcul('5')">5</div>
+                <div class="six case" onclick="UseCalcul('6')">6</div>
+                <div class="seven case" onclick="UseCalcul('7')">7</div>
+                <div class="eight case" onclick="UseCalcul('8')">8</div>
+                <div class="nine case" onclick="UseCalcul('9')">9</div>
                 
             </div>
         </div>
