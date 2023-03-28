@@ -77,7 +77,74 @@ class BaseCalculator {
 
 let baseCalculator = new BaseCalculator();
 
+function is_maj(event){
+    if(event.getModifierState("Shift") && !event.getModifierState("CapsLock")){
+        return true
+    }
+    else if(!event.getModifierState("Shift") && event.getModifierState("CapsLock")){
+       return true
+    }
+    else{
+        return false
+    }
+}
+    
 
 
+//EXTRA
+document.addEventListener("keyup", function(event) {
+    if (event.code.startsWith("Digit")) { 
+        if(is_maj(event)){ //Chiffre
+            baseCalculator.UseCalcul(event.code[event.code.length - 1])
+        }
+        else{ //Traitement du - et de (
+            if(event.code === "Digit6"){
+                baseCalculator.UseCalcul("-")
+            } 
+            else if(event.code === "Digit5"){
+                baseCalculator.UseCalcul("(")
+            }
+        }
+    }
+    else{ //Traitement des autres touches
+        switch (event.code){
+            case "Backspace":
+                baseCalculator.UseCalcul("B")
+                break
+            case "Delete":
+                baseCalculator.UseCalcul("C")
+                break
+            case "Enter":
+                baseCalculator.Calc()
+                break
+            case "ArrowUp":
+                baseCalculator.Previous()
+                break
+            case "Equal":
+                if(is_maj(event)){ // +
+                    baseCalculator.UseCalcul("+")
+                }
+                else{ // =
+                    baseCalculator.Calc()
+                }
+                break
+            case "Backslash":
+                baseCalculator.UseCalcul("×")
+                break
+            case "Period":
+                baseCalculator.UseCalcul("÷")
+                break
+            case "KeyM":
+                baseCalculator.UseCalcul(",")
+                break
+            case "Minus":
+                baseCalculator.UseCalcul(")")
+                break
+        }
+
+    }
+
+    
+});
 
 
