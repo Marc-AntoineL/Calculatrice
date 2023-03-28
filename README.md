@@ -16,3 +16,6 @@
     - UpArrow : P
     - Les autres touches sont assez évidentes
 - Calcul du Modulo
+
+# Visuel :
+![Screenshot]("./images/Screen.JPG")
