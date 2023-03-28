@@ -15,3 +15,4 @@
     - supr : C
     - UpArrow : P
     - Les autres touches sont assez évidentes
+- Calcul du Modulo

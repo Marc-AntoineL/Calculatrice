@@ -93,6 +93,7 @@ function is_maj(event){
 
 //EXTRA
 document.addEventListener("keyup", function(event) {
+    console.log(event.code)
     if (event.code.startsWith("Digit")) { 
         if(is_maj(event)){ //Chiffre
             baseCalculator.UseCalcul(event.code[event.code.length - 1])
@@ -139,6 +140,9 @@ document.addEventListener("keyup", function(event) {
                 break
             case "Minus":
                 baseCalculator.UseCalcul(")")
+                break
+            case "Quote":
+                baseCalculator.UseCalcul("%")
                 break
         }
 
