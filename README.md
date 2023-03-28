@@ -18,4 +18,4 @@
 - Calcul du Modulo
 
 # Visuel :
-![Screenshot]("images/Screen.JPG")
+![Screenshot](images/Screen.JPG)
