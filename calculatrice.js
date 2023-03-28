@@ -1,8 +1,10 @@
 console.log("Js is working !")
 
 class BaseCalculator {
+    
     constructor() {
-     // Do some stuff
+        this.MaListe = []
+        this.Limite = 10 //On définit arbitrairement une limite de calculs enregistrés
      }
 
 
@@ -29,6 +31,23 @@ class BaseCalculator {
             document.getElementsByClassName("text_result")[0].innerHTML = "\n"
     
             document.getElementsByClassName("previous_calc")[0].innerHTML = calcul
+
+            if(this.MaListe.length === 0){
+                this.MaListe.push(calcul) //On push le calcul dans la liste afin de pouvoir le récupérer par la suite
+            }
+            else{
+                if (calcul !== this.MaListe[this.MaListe.length - 1]){ //On évite d'enregistrer le même calcul
+                    if(this.MaListe.length >= this.Limite){ //Si le tableau est trop remplit, on clear la valeur la plus lointaine pour ne pas trop charger la variable
+                        this.MaListe.shift()
+                    }
+                    this.MaListe.push(calcul) //On push le calcul dans la liste afin de pouvoir le récupérer par la suite
+
+                }
+            }
+
+          
+
+
             calcul = calcul.replaceAll('×','*') //On remplace les multiplications par * pour que la fonction eval() comprenne
             calcul = calcul.replaceAll('÷','/') //On remplace les divisions par / pour que la fonction eval() comprenne
             calcul = calcul.replaceAll(',','.') //On remplace les virgule par . pour que la fonction eval() comprenne
@@ -45,6 +64,13 @@ class BaseCalculator {
             document.getElementsByClassName("tape_txt")[0].innerHTML = "\n"
         }
     
+    }
+
+    Previous(){
+        if(this.MaListe.length !== 0){ //On vérif que le tableau n'est pas vide
+            document.getElementsByClassName("tape_txt")[0].innerHTML = this.MaListe.pop() //On met le calcul précédent
+        }
+        
     }
 
 }

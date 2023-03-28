@@ -131,6 +131,10 @@ body{
     grid-column: 5;
     grid-row: 1;  
 }
+.previous {
+    grid-column: 6;
+    grid-row: 3;  
+}
 .case{
     border: 1px solid black;
     border-radius: 10px;
